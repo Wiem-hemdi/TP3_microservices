@@ -1,0 +1,14 @@
+type Task {
+    id: ID!
+    title: String!
+    description: String!
+    completed: Boolean!
+}
+type Query {
+    tasnpmk(id: ID!): Task
+    tasks: [Task]
+}
+type Mutation {
+    addTask(title: String!, description: String!, completed: Boolean!): Task
+    completeTask(id: ID!): Task
+}
